@@ -210,34 +210,34 @@ detectPlayerFighterCollision:
 	ret
 
 detectBulletHit:
-	ld a, (isShooting)
-	cp a, 1
-	ret nz
-	ld a, (fighterYcoordinate)
-	ld b, a
-	ld a, (delBulletYcoordinate)
-	sub b
-	cp 16
-	ret nc
-	ld a, (fighterXcoordinate)
-	ld b, a
-	ld a, (delBulletXcoordinate)
-	sub b
-	cp 20 
-	ret nc
+    ld a, (isShooting)
+    cp a, 1
+    ret nz
+    ld a, (fighterYcoordinate)
+    ld b, a
+    ld a, (delBulletYcoordinate)
+    sub b
+    cp 16
+    ret nc
+    ld a, (fighterXcoordinate)
+    ld b, a
+    ld a, (delBulletXcoordinate)
+    sub b
+    cp 20 
+    ret nc
     ; If the player is closer to the end of the screen, gets more score
-	ld hl, (score)
+    ld hl, (score)
     inc hl
     ld a, (playerXcoordinate)
     ld e,a
     ld d, 0
-	add hl, de
-	ld (score), hl
+    add hl, de
+    ld (score), hl
     call outputHitSound
     call displayScoreBar
     call deleteFighterSprite
     call resetFighterToRandomizedPosition
-	ret
+    ret
 
 deletePlayerSprite:
 	ld a,(playerXcoordinate)
