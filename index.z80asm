@@ -62,17 +62,17 @@ moveFighter:
     call resetFighterToRandomizedPosition
     ret
     continueToMoveFighter:
-	ld (fighterXcoordinate), a
-	ret
+    ld (fighterXcoordinate), a
+    ret
 
 resetFighterToRandomizedPosition:
-	call getRandomNumber
-	cp 167
-	jr nc, resetFighterToRandomizedPosition
+    call getRandomNumber
+    cp 167
+    jr nc, resetFighterToRandomizedPosition
     cp 16
     jr c, resetFighterToRandomizedPosition
-	ld (fighterYcoordinate), a
-	ld a, 232
+    ld (fighterYcoordinate), a
+    ld a, 232
     ld (fighterXcoordinate), a
     ret
 
