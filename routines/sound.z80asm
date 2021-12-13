@@ -1,0 +1,54 @@
+outputZapSound:
+	ld d,16
+	ld e,0
+	ld b,255
+beepLoop1:
+	and 248
+	out (254),a
+	cpl
+	ld d,a
+	ld c,e
+beepLoop2:	
+	dec c
+	jr nz,beepLoop2
+	dec e
+	djnz beepLoop1
+	ret
+
+outputHitSound:
+	ld b,100
+	ld a,0
+outputHitSoundLoop:
+	xor 248
+	ld e,a
+	out (254),a
+	dec b
+	ret z
+	ld hl,300
+outputHitSoundLoop2:
+	dec hl
+	ld a,h
+	or l
+	jr nz, outputHitSoundLoop2 	 
+	ld a,e
+	jp outputHitSoundLoop
+
+outputGameOverSound:
+	ld bc,400
+	ld a,0
+beepGameOverLoop:
+	xor 248
+	ld e,a
+	out (254),a
+	dec bc
+	ld a, c
+	or b
+	ret z
+	ld hl,500
+beepGameOverloop2:
+	dec hl
+	ld a,h
+	or l
+	jr nz, beepGameOverloop2 	 
+	ld a,e
+	jp beepGameOverLoop

@@ -1,0 +1,24 @@
+resetTimer:
+    ld h,60
+    ld l,0
+    ld (timer), hl
+    ret
+
+timerEvent:
+    ld hl, (timer)
+    ld a, l
+    cp 255
+    jr nz, continueCountDown
+    ld l, 50
+continueCountDown:
+    dec hl
+    ld (timer), hl
+    ret
+
+hasTimerExpired:
+    ld hl, (timer)
+    ld a,h
+    or l 
+    ret   
+
+timer dw 0

@@ -1,0 +1,12 @@
+playerXcoordinate:	db	0
+playerYcoordinate:	db	176
+
+bulletXcoordinate:	db	0
+bulletYcoordinate:	db	0
+delBulletXcoordinate:	db	0
+delBulletYcoordinate:	db	0
+isShooting: db 0
+score	dw 0
+
+fighterXcoordinate: db 232
+fighterYcoordinate: db 32
