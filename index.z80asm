@@ -51,7 +51,7 @@ gameOverDueToCrash:
 
 timeExpired:
     ld hl,startOverMessage
-	call showMessage
+    call showMessage
     call waitForSKeyPressed
     jp gameBegin
 
@@ -190,24 +190,24 @@ bulletStillflying:
     ret
 
 detectPlayerFighterCollision:
-	ld a, (playerYcoordinate)
-	ld b, a
-	ld a, (fighterYcoordinate)
-	sub b
-	cp 16
-	ret nc
-	ld a, (playerXcoordinate)
-	ld b, a
-	ld a, (fighterXcoordinate)
-	sub b
-	cp 20 
-	ret nc
-	call outputGameOverSound
+    ld a, (playerYcoordinate)
+    ld b, a
+    ld a, (fighterYcoordinate)
+    sub b
+    cp 16
+    ret nc
+    ld a, (playerXcoordinate)
+    ld b, a
+    ld a, (fighterXcoordinate)
+    sub b
+    cp 20 
+    ret nc
+    call outputGameOverSound
     ld hl,gameOverMessage
-	call showMessage
-	ld a, 1
-	rrc a
-	ret
+    call showMessage
+    ld a, 1
+    rrc a
+    ret
 
 detectBulletHit:
     ld a, (isShooting)
@@ -240,42 +240,42 @@ detectBulletHit:
     ret
 
 deletePlayerSprite:
-	ld a,(playerXcoordinate)
-	ld c,a
-	ld a,(playerYcoordinate)
-	ld b,a
+    ld a,(playerXcoordinate)
+    ld c,a
+    ld a,(playerYcoordinate)
+    ld b,a
     call deleteSprite
     ret
 
 deleteFightersprite:
-	ld a,(fighterXcoordinate)
+    ld a,(fighterXcoordinate)
     ld c,a
-	ld a,(fighterYcoordinate)
-	ld b,a
+    ld a,(fighterYcoordinate)
+    ld b,a
     call deleteSprite
     ret;
 
 drawPlayerSprite:
-	ld a,(playerXcoordinate)
-	ld c,a
-	ld a,(playerYcoordinate)
-	ld b,a
+    ld a,(playerXcoordinate)
+    ld c,a
+    ld a,(playerYcoordinate)
+    ld b,a
     ld hl,playerSpriteData0
     call drawSprite
     ret
 
 drawFighterSprite:
-	ld a,(fighterXcoordinate)
-	ld c,a
-	ld a,(fighterYcoordinate)
-	ld b,a
+    ld a,(fighterXcoordinate)
+    ld c,a
+    ld a,(fighterYcoordinate)
+    ld b,a
     ld hl,fighterSpriteData0
     call drawSprite
     ret
 
 displayInstructions:
     ld hl,instructionsMessage
-	call showMessage
+    call showMessage
     ret
 
 waitForSKeyPressed:
