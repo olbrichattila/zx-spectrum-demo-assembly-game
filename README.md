@@ -14,7 +14,7 @@ What is included:
 - Input from keyboard
 - Collison detection
 
-![Screen](./doc/images/game-screen.png)
+![Screen](https://github.com/olbrichattila/zx-spectrum-demo-assembly-game/blob/main/images/game-screen.png?raw=true)
 
 The purpose of this game is to collect as high score as possible. You have to shoot down the rockets. You get more scores if you are closed to the right of the screen, but it makes mode dangerous to shoot down the rocket as you have less time to act.
 
