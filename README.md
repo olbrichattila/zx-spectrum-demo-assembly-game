@@ -26,4 +26,13 @@ Keys:
 - M right
 - Space fire.
 
+# I've also createad online animated sprite editor, what you can use to create your sprites, and generate the assemble definitions:
+
+Try it here:
+https://attilaolbrich.co.uk/hobby-projects/zx-spectrum-sprite-editor/
+
+## Screensot:
+
+![Screen](https://raw.githubusercontent.com/olbrichattila/zx-spectrum-sprite-editor/main/screenshot.png)
+
 Enjoy
