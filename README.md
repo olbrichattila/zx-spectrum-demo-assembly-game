@@ -35,4 +35,8 @@ https://attilaolbrich.co.uk/hobby-projects/zx-spectrum-sprite-editor/
 
 ![Screen](https://raw.githubusercontent.com/olbrichattila/zx-spectrum-sprite-editor/main/screenshot.png)
 
+### Source code (ReactJs)
+
+https://github.com/olbrichattila/zx-spectrum-sprite-editor
+
 Enjoy
