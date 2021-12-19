@@ -26,6 +26,10 @@ Keys:
 - M right
 - Space fire.
 
+## Downlad the game as TZX to try in your emulator:
+
+https://github.com/olbrichattila/zx-spectrum-demo-assembly-game/raw/main/tzx/demo-game.tzx
+
 # I've also createad online animated sprite editor, what you can use to create your sprites, and generate the assemble definitions:
 
 Try it here:
