@@ -2,9 +2,24 @@
 
 # Language: Assembly
 
-# Development environment used:
+# Development toolchain used:
 
-Klive IDE v0.11.0: (https://github.com/Dotneteer/kliveide/releases), download, and try it.
+
+Visual Studio Code – Editor, with the following extensions:
+
+Z80 Assembly 0.0.3 by Imanolea
+
+DeZog 2.2.3 by Maziac (this is a renamed update to Z80 Debugger 0.9.1, also by Maziac)
+
+ZEsarUX 9.1 – Emulator
+
+sjasmplus 1.18,2 – Z80 compiler
+
+
+## Details how to use and install the toolchain:
+
+http://www.breakintoprogram.co.uk/hardware/computers/zx-spectrum/assembly-language/z80-development-toolchain
+
 
 This is a demostration game only
 What is included:

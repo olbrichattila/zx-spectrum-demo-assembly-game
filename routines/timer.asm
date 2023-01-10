@@ -1,21 +1,21 @@
-resetTimer:
+reset_timer:
     ld h,60
     ld l,0
     ld (timer), hl
     ret
 
-timerEvent:
+timer_event:
     ld hl, (timer)
     ld a, l
     cp 255
-    jr nz, continueCountDown
+    jr nz, continue_count_down
     ld l, 50
-continueCountDown:
+continue_count_down:
     dec hl
     ld (timer), hl
     ret
 
-hasTimerExpired:
+has_timer_expired:
     ld hl, (timer)
     ld a,h
     or l 

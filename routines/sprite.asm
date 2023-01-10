@@ -1,44 +1,44 @@
 ; deltes the srpite which is 16 line height 3 bites wide
-; c, x Coordinate
-; d, y Coorinate 
+; c, x coordinate
+; d, y coorinate 
 
-deleteSprite:			
-	call yx2pix		;point DE at the corresponding screen address
+delete_sprite:			
+	call yx2pix		;point de at the corresponding screen address
 	ld b,16			;sprite is 16 lines high
-deleteSpriteLoop:
-	ld a,0			;empty A to delete
+delete_sprite_loop:
+	xor a			;empty a to delete
 	ld (de),a		;repeat a total of 3 times
 	inc e			;next column along
 	ld (de),a
 	inc e
 	ld (de),a
 	dec e
-	dec e			;move DE back to start of line
-	call getNextLine	;move DE down one line
-	djnz deleteSpriteLoop		;repeat 16 times
+	dec e			;move de back to start of line
+	call get_next_line	;move de down one line
+	djnz delete_sprite_loop		;repeat 16 times
 	ret
 
-drawStaticSprite:
+draw_static_sprite:
 	push hl
 	call yx2pix
 	pop hl
 	ld b,8
-	jp drawLoop
+	jp draw_loop
 
-; Draw sprite
-; c X coordinate
-; b Y coordinate
+; draw sprite
+; c x coordinate
+; b y coordinate
 ; hl points to first stripe frame in memory
-drawSprite:
+draw_sprite:
 	push bc
 	call yx2pix
 	pop bc
 	ld a,c
 	; chose image by frame index in a
 	and 00000111b
-	call getsprite
+	call get_sprite
 	ld b,16
-drawLoop:
+draw_loop:
 	ld a,(hl)
 	ld (de),a
 	inc hl
@@ -52,12 +52,12 @@ drawLoop:
 	inc hl
 	dec e
 	dec e
-	call getNextline
-	djnz drawLoop
+	call get_next_line
+	djnz draw_loop
 	ret
 	
-; register DE contains current line 	
-getNextLine:
+; register de contains current line 	
+get_next_line:
 	inc d
 	ld a,d
 	and 7
@@ -71,9 +71,9 @@ getNextLine:
 	ld d,a
 	ret
 	
-; B=y, 0-192
-; C=x, 0-255 	
-; return position on screen id DE
+; b=y, 0-192
+; c=x, 0-255 	
+; return position on screen id de
 yx2pix:
 	ld a,b
 	rra
@@ -103,7 +103,7 @@ yx2pix:
 ; input a frame indes
 ; hl first frame address
 ; return hl pointing to the selected sprite rotated by 0-7 (a)
-getSprite:
+get_sprite:
 	push hl
 	ld h,0		
 	ld l,a

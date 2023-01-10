@@ -1,3 +1,0 @@
-varPermanentCurrentColours  equ 23693
-romSetPermanentColors       equ 8859
-romClearScreen              equ 3503
