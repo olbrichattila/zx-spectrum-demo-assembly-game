@@ -29,7 +29,7 @@ What is included:
 - Input from keyboard
 - Collison detection
 
-![Screen](https://github.com/olbrichattila/zx-spectrum-demo-assembly-game/blob/main/images/game-screen.png?raw=true)
+![Screen](https://github.com/olbrichattila/zx-spectrum-demo-assembly-game/blob/main/game-screen.png?raw=true)
 
 The purpose of this game is to collect as high score as possible. You have to shoot down the rockets. You get more scores if you are closed to the right of the screen, but it makes mode dangerous to shoot down the rocket as you have less time to act.
 
@@ -43,7 +43,7 @@ Keys:
 
 ## Downlad the game as TZX to try in your emulator:
 
-https://github.com/olbrichattila/zx-spectrum-demo-assembly-game/raw/main/tzx/demo-game.tzx
+https://github.com/olbrichattila/zx-spectrum-demo-assembly-game/raw/main/game.tap
 
 # I've also createad online animated sprite editor, what you can use to create your sprites, and generate the assemble definitions:
 
@@ -52,7 +52,7 @@ https://attilaolbrich.co.uk/hobby-projects/zx-spectrum-sprite-editor/
 
 ## Screensot:
 
-![Screen](https://raw.githubusercontent.com/olbrichattila/zx-spectrum-sprite-editor/main/screenshot.png)
+![Screen](https://github.com/olbrichattila/zx-spectrum-demo-assembly-game/blob/main/screenshot.png?raw=true)
 
 ### Source code (ReactJs)
 
