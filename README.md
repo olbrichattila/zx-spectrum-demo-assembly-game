@@ -59,3 +59,7 @@ https://attilaolbrich.co.uk/hobby-projects/zx-spectrum-sprite-editor/
 https://github.com/olbrichattila/zx-spectrum-sprite-editor
 
 Enjoy
+
+## About me:
+- Learn more about me on my personal website. https://attilaolbrich.co.uk/menu/my-story
+- Check out my latest blog blog at my personal page. https://attilaolbrich.co.uk/blog/1/single
